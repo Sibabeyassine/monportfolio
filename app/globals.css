@@ -45,3 +45,36 @@ body{overflow-x:hidden}
 .tag-node{left:8px;bottom:72px}
 .tag-next{right:0;bottom:66px}
 @media(max-width:560px){.photo-frame{width:255px;height:350px}.tag-react{right:-4px;top:54px}.tag-node{left:-2px;bottom:48px}.tag-next{right:-5px;bottom:45px}}
+
+/* Parcours et fin de page */
+.journey-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:90px;margin-top:42px;align-items:start}
+.journey-layout h2{font:500 clamp(36px,4vw,56px)/1.13 var(--font-manrope);letter-spacing:-.045em;margin:0 0 22px}
+.journey-layout h2 em{font-style:normal;color:var(--blue)}
+.journey-intro{max-width:430px;color:var(--muted);font-size:15px;line-height:1.75}
+.journey-layout .timeline{margin:0}
+.timeline article{grid-template-columns:125px 1fr;transition:padding .25s ease,background .25s ease}
+.timeline article:hover{padding-left:14px;background:linear-gradient(90deg,#eaf2ff80,transparent)}
+.timeline article>span{line-height:1.5}
+.contact-links{display:flex;flex-direction:column;align-items:center;gap:16px;margin:32px 0 90px}
+.contact-links .email{margin:0}
+.contact-links>a:last-child{font-size:13px;color:#91a4c2;letter-spacing:.06em}
+.nav-cta svg,.button .nav-cta svg,.button svg{flex:0 0 auto}
+@media(max-width:900px){.journey-layout{grid-template-columns:1fr;gap:35px}.journey-layout .timeline{margin:0}}
+@media(max-width:560px){.journey-layout h2{font-size:38px}.timeline article{grid-template-columns:92px 1fr}.contact-links{margin-bottom:70px}.nav-cta{font-size:0}.nav-cta svg{width:20px}}
+
+/* Titres et sous-titres légers */
+.hero h1,
+.section h2,
+.section-heading h2,
+.contact h2,
+.journey-layout h2,
+.project h3,
+.skill-grid h3,
+.timeline h3{font-weight:400}
+
+.hero-copy>p,
+.about-text p:first-child,
+.section-heading>p,
+.skills-heading p,
+.journey-intro,
+.contact>div>p{font-weight:400}
