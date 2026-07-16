@@ -39,7 +39,7 @@ export default function Home() {
       <div className="hero-visual visual-enter">
         <div className="orbit orbit-one" /><div className="orbit orbit-two" />
         <div className="photo-frame">
-          <object data="/yassine-sibabe.png" type="image/png" aria-label="Portrait professionnel de SIBABE Yassine">
+          <object data="/yassine-sibabe.webp" type="image/webp" aria-label="Portrait professionnel de SIBABE Yassine">
             <span className="photo-fallback">YS<small>Photo à ajouter dans public/</small></span>
           </object>
         </div>
