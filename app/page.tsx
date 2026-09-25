@@ -6,12 +6,17 @@ const Linkedin = () => <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 
 const Download = () => <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14" /></svg>;
 
 const projects = [
-  { number: "01", name: "Kideo", role: "Projet de fin de licence · Full-stack", description: "Écosystème sécurisé de lecture vidéo pour enfants : application React Native, interface web parentale et backend centralisé avec contrôle strict des contenus.", tags: ["React Native", "React.js", "Node / Express", "MongoDB"], link: "https://kideo-togo.netlify.app/" },
-  { number: "02", name: "LandMapper", role: "Architecture · Travail d’équipe", description: "Plateforme de certification foncière en Afrique de l’Ouest. Contribution à la refonte de l’architecture pour améliorer scalabilité, maintenabilité et expérience utilisateur.", tags: ["Total.js", "MongoDB", "Architecture"], link: null },
-  { number: "03", name: "RepoBug", role: "Projet personnel · Solo", description: "Outil personnel de détection de bugs dans les bases de code, avec persistance structurée des analyses et de leurs résultats.", tags: ["Next.js", "Prisma", "Code analysis"], link: null },
-  { number: "04", name: "Zamora", role: "Frontend · Travail d’équipe", description: "Plateforme de gestion pour restaurants : amélioration des interfaces, du thème sombre, des catégories, des cartes et du parcours de commande.", tags: ["React", "Node.js", "MongoDB"], link: null },
-  { number: "05", name: "IntellMeet", role: "Full-stack · Temps réel", description: "Application de visioconférence avec gestion des réunions, des utilisateurs, des caméras et des flux vidéo en temps réel.", tags: ["React", "Socket.IO", "WebRTC"], link: null },
-  { number: "06", name: "TropiNutri", role: "Full-stack · Tests & UX", description: "Tests fonctionnels, documentation des bugs, analyse de l’expérience utilisateur et développement des fonctionnalités liées aux restaurants.", tags: ["Tests fonctionnels", "UX", "Full-stack"], link: null },
+  { number: "01", name: "KLINZO", role: "2026 · SaaS déchets · Full-stack", description: "Plateforme de collecte des déchets reliant usagers, entreprises et collecteurs, avec landing publique, espaces métier, cartographie et administration SaaS.", tags: ["React 19", "NestJS", "TypeScript", "Prisma", "Leaflet"], link: null },
+  { number: "02", name: "Eventia", role: "2026 · Événementiel · Web & API", description: "Solution de gestion événementielle avec billetterie, QR codes, contrôle d’accès, cartographie et tableaux de bord organisateurs.", tags: ["React", "NestJS", "TypeORM", "QR Code"], link: null },
+  { number: "03", name: "COPA Gestion", role: "2026 · Produit desktop & web", description: "Application de gestion comptable, commerciale et de stock conçue pour centraliser les opérations quotidiennes des entreprises.", tags: ["React", "Electron", "Node.js", "MongoDB"], link: null },
+  { number: "04", name: "LIVEINBLACK", role: "2026 · Plateforme événementielle", description: "Écosystème web et mobile réunissant découverte d’événements, billetterie, paiements, messagerie, espaces organisateurs et outils de modération.", tags: ["Next.js", "React Native", "MongoDB", "Stripe"], link: null },
+  { number: "05", name: "Total Clean Pro", role: "2026 · Refonte full-stack", description: "Refonte d’un site de services en application full-stack avec catalogue administrable, gestion des produits et génération de factures PDF.", tags: ["React", "Express", "MongoDB", "Vercel Blob"], link: null },
+  { number: "06", name: "Kideo / KidPlay", role: "2025 — 2026 · Projet de licence", description: "Écosystème sécurisé de lecture vidéo pour enfants : application mobile, interface parentale web, profils, playlists et contrôle du temps d’écran.", tags: ["React Native", "React", "Express", "MongoDB"], link: "https://kideo-togo.netlify.app/" },
+  { number: "07", name: "LandMapper", role: "2025 · Architecture · Équipe", description: "Plateforme de certification foncière en Afrique de l’Ouest. Contribution à la refonte de l’architecture, à la maintenabilité et aux parcours métier.", tags: ["Total.js", "MongoDB", "Architecture"], link: null },
+  { number: "08", name: "Zamora", role: "2025 · Restauration · Équipe", description: "Plateforme de gestion pour restaurants : interfaces, thème sombre, catégories, cartes et optimisation du parcours de commande.", tags: ["React", "Node.js", "MongoDB"], link: null },
+  { number: "09", name: "RepoBug", role: "2025 · Projet personnel", description: "Outil personnel de détection de bugs dans les bases de code, avec persistance structurée des analyses et de leurs résultats.", tags: ["Next.js", "Prisma", "Code analysis"], link: null },
+  { number: "10", name: "IntellMeet", role: "2025 · Collaboration temps réel", description: "Plateforme collaborative avec réunions, gestion des utilisateurs, visioconférence et échanges en temps réel.", tags: ["React", "Express", "Socket.IO", "WebRTC"], link: null },
+  { number: "11", name: "TropiNutri", role: "2025 · Produit nutrition", description: "Contribution aux tests fonctionnels, à la documentation des anomalies, à l’expérience utilisateur et aux fonctionnalités liées aux restaurants.", tags: ["Next.js", "Prisma", "Tests", "UX"], link: null },
 ];
 
 const skills = [
@@ -22,28 +27,30 @@ const skills = [
 
 export default function Home() {
   return <main>
-    <nav className="nav wrap">
-      <a className="brand" href="#accueil" aria-label="Accueil"><span>YS</span> SIBABE Yassine</a>
-      <div className="navlinks"><a href="#apropos">À propos</a><a href="#projets">Projets</a><a href="#competences">Compétences</a><a href="#parcours">Parcours</a></div>
-      <a href="/CV-SIBABE-Yassine.pdf" download className="nav-cta">Télécharger mon CV <Download /></a>
-    </nav>
+    <header className="site-header site-header-dark">
+      <nav className="nav nav-clean wrap">
+        <a className="brand brand-clean" href="#accueil" aria-label="Accueil"><span>YS</span><strong>Yassine Sibabe</strong></a>
+        <div className="navlinks"><a href="#apropos">À propos</a><a href="#projets">Projets</a><a href="#competences">Compétences</a><a href="#parcours">Parcours</a></div>
+        <a href="/CV-SIBABE-Yassine.pdf" target="_blank" rel="noreferrer" className="nav-cta nav-cta-clean">Voir mon CV <Arrow /></a>
+      </nav>
+    </header>
 
-    <section className="hero wrap" id="accueil">
-      <div className="hero-copy hero-enter">
-        <div className="eyebrow"><i /> Disponible pour de nouvelles opportunités</div>
-        <h1>Je transforme des idées en <em>expériences web.</em></h1>
-        <p>Développeur full-stack diplômé en architecture logicielle, je conçois des applications modernes, sécurisées et bien structurées — du web au mobile, de l’interface jusqu’à l’API.</p>
-        <div className="hero-actions"><a className="button primary" href="#projets">Découvrir mes projets <Arrow /></a><a className="button secondary" href="/CV-SIBABE-Yassine.pdf" target="_blank" rel="noreferrer">Consulter mon CV <Arrow /></a></div>
-        <div className="socials"><span>Retrouvez-moi</span><a href="https://github.com/Sibabeyassine" target="_blank" aria-label="GitHub"><Github /></a><a href="https://www.linkedin.com/in/yassine-sibabe-584099280" target="_blank" aria-label="LinkedIn"><Linkedin /></a></div>
-      </div>
-      <div className="hero-visual visual-enter">
-        <div className="orbit orbit-one" /><div className="orbit orbit-two" />
-        <div className="photo-frame">
-          <object data="/yassine-sibabe.webp" type="image/webp" aria-label="Portrait professionnel de SIBABE Yassine">
-            <span className="photo-fallback">YS<small>Photo à ajouter dans public/</small></span>
-          </object>
+    <section className="hero-designer" id="accueil">
+      <div className="hero-designer-inner wrap">
+        <div className="hero-designer-copy">
+          <div className="hero-overline"><span>Portfolio — 2026</span><span>Lomé, Togo</span></div>
+          <h1>Je transforme des idées en produits <em>numériques.</em></h1>
+          <div className="hero-designer-intro">
+            <p>Développeur full-stack diplômé en architecture logicielle. Je conçois des expériences web et mobile claires, utiles et techniquement solides.</p>
+            <span className="availability"><i /> Disponible pour une opportunité</span>
+          </div>
+          <div className="hero-designer-actions"><a className="designer-cta" href="#projets">Voir mes projets <Arrow /></a><a className="designer-link" href="#contact">Parlons de votre projet</a></div>
         </div>
-        <span className="floating-tag tag-react">React</span><span className="floating-tag tag-node">Node.js</span><span className="floating-tag tag-next">Next.js</span>
+        <figure className="hero-portrait">
+          <div className="hero-portrait-image"><img src="/yassine-sibabe.webp" alt="Portrait professionnel de SIBABE Yassine" /></div>
+          <figcaption><span>SIBABE Yassine</span><span>Full-stack developer</span></figcaption>
+        </figure>
+        <div className="hero-specialties"><span>01</span><p>Frontend<br/><strong>React · Next.js</strong></p><span>02</span><p>Backend<br/><strong>Node.js · API</strong></p><span>03</span><p>Mobile<br/><strong>React Native</strong></p></div>
       </div>
     </section>
 
@@ -52,14 +59,34 @@ export default function Home() {
       <div className="about-text"><p>Je suis Yassine, développeur full-stack récemment diplômé en architecture logicielle.</p><p>Mes projets couvrent la sécurité des contenus numériques, la gestion foncière et la restauration, avec une attention particulière portée aux architectures propres, à la scalabilité et à la fiabilité. J’aime comprendre le besoin, apprendre rapidement et transformer les contraintes en solutions simples et évolutives.</p><div className="qualities"><span>Architecture logicielle</span><span>Sécurité applicative</span><span>Esprit d’équipe</span><span>Autonomie</span></div></div>
     </section></Reveal>
 
-    <section className="projects-section" id="projets"><div className="wrap"><Reveal><div className="section-heading"><div><span className="section-no light">02 — PROJETS SÉLECTIONNÉS</span><h2>Des projets qui racontent<br/>ma façon de <em>construire.</em></h2></div><p>Une sélection d’expériences où technique, collaboration et attention aux détails se rencontrent.</p></div></Reveal>
+    <section className="projects-section" id="projets"><div className="wrap"><Reveal><div className="section-heading"><div><span className="section-no light">02 — PROJETS · 2025 À AUJOURD’HUI</span><h2>Des projets qui racontent<br/>ma façon de <em>construire.</em></h2></div><p>Des produits réalisés en autonomie ou en équipe, de la première architecture jusqu’aux interfaces utilisées au quotidien.<span className="scroll-hint">Faites défiler →</span></p></div></Reveal>
       <Reveal stagger={90}><div className="project-list">{projects.map((p) => { const content = <><span className="project-number">{p.number}</span><div><span className="project-role">{p.role}</span><h3>{p.name}</h3><p>{p.description}</p><div className="tags">{p.tags.map(t => <span key={t}>{t}</span>)}</div></div><div className="project-arrow"><Arrow /></div></>; return p.link ? <a className="project featured" href={p.link} target="_blank" rel="noreferrer" key={p.name} aria-label={`Voir le projet ${p.name}`}>{content}</a> : <article className="project" key={p.name}>{content}</article>; })}</div></Reveal>
     </div></section>
 
-    <Reveal><section className="section skills wrap" id="competences"><span className="section-no">03 — EXPERTISE</span><div className="skills-heading"><h2>Les outils au service<br/>de <em>bonnes idées.</em></h2><p>Une stack moderne pour concevoir, développer, tester et déployer des produits web complets.</p></div><div className="skill-grid">{skills.map((s, i) => <article key={s.title}><span className="skill-icon">0{i+1}</span><h3>{s.title}</h3><p>{s.text}</p><div>{s.items.map(item => <span key={item}>{item}</span>)}</div></article>)}</div></section></Reveal>
+    <Reveal><section className="section skills wrap" id="competences"><span className="section-no">03 — EXPERTISE</span><div className="skills-heading"><h2>Une expertise de bout en bout.</h2><p>Conception d’interfaces, APIs, données et déploiement : chaque couche contribue à la qualité du produit final.</p></div><div className="skill-grid">{skills.map((s, i) => <article key={s.title}><span className="skill-icon">0{i+1}</span><h3>{s.title}</h3><p>{s.text}</p><div>{s.items.map(item => <span key={item}>{item}</span>)}</div></article>)}</div></section></Reveal>
 
-    <Reveal><section className="experience wrap" id="parcours"><span className="section-no">04 — PARCOURS</span><div className="journey-layout"><div><h2>Une base technique,<br/><em>une vision produit.</em></h2><p className="journey-intro">Une formation en architecture logicielle renforcée par des projets concrets, individuels et collectifs.</p></div><div className="timeline"><article><span>2024 — 2025</span><div><h3>Licence en Architecture Logicielle</h3><p>ESGIS · Conception logicielle, architecture et développement full-stack</p></div></article><article><span>2021 — 2022</span><div><h3>Baccalauréat scientifique</h3><p>Sciences · Option scientifique</p></div></article><article><span>Langues</span><div><h3>Français & Anglais</h3><p>Français natif · Anglais intermédiaire</p></div></article><article><span>Localisation</span><div><h3>Agoè-Dikamé, Togo</h3><p>Disponible pour de nouvelles opportunités et collaborations</p></div></article></div></div></section></Reveal>
+    <Reveal><section className="experience wrap" id="parcours"><span className="section-no">04 — PARCOURS</span><div className="journey-layout"><div><h2>Apprendre, construire,<br/><em>faire évoluer.</em></h2><p className="journey-intro">Une formation en architecture logicielle renforcée par des projets concrets, individuels et collectifs.</p></div><div className="timeline"><article><span>2024 — 2025</span><div><h3>Licence en Architecture Logicielle</h3><p>ESGIS · Conception logicielle, architecture et développement full-stack</p></div></article><article><span>2021 — 2022</span><div><h3>Baccalauréat scientifique</h3><p>Sciences · Option scientifique</p></div></article><article><span>Langues</span><div><h3>Français & Anglais</h3><p>Français natif · Anglais intermédiaire</p></div></article><article><span>Localisation</span><div><h3>Agoè-Dikamé, Togo</h3><p>Disponible pour de nouvelles opportunités et collaborations</p></div></article></div></div></section></Reveal>
 
-    <section className="contact" id="contact"><div className="wrap contact-inner"><span className="section-no light">05 — CONTACT</span><h2>Construisons quelque chose<br/>d’utile et de <em>durable.</em></h2><p>Une opportunité, une collaboration ou une idée de produit ? Je serai ravi d’en discuter.</p><div className="contact-links"><a className="email" href="mailto:sibabeyassine@gmail.com">sibabeyassine@gmail.com <Arrow /></a><a href="tel:+22871309997">+228 71 30 99 97</a></div><div className="footer"><span>© 2026 SIBABE Yassine · Agoè-Dikamé, Togo</span><div><a href="https://github.com/Sibabeyassine" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/yassine-sibabe-584099280" target="_blank">LinkedIn</a><a href="/CV-SIBABE-Yassine.pdf" download>CV</a></div><a href="#accueil">Retour en haut ↑</a></div></div></section>
+    <section className="contact contact-redesign" id="contact">
+      <div className="wrap contact-main">
+        <div className="contact-heading">
+          <span className="section-no">05 — CONTACT</span>
+          <h2>Vous avez un projet ?<br/><em>Échangeons.</em></h2>
+        </div>
+        <div className="contact-details">
+          <p>Une opportunité, une collaboration ou un produit à construire ? Écrivez-moi, je vous répondrai avec plaisir.</p>
+          <a className="contact-email" href="mailto:sibabeyassine.com"><span>sibabeyassine.com</span><Arrow /></a>
+          <div className="contact-meta"><span>Téléphone</span><a href="tel:+22871309997">+228 71 30 99 97</a><span>Localisation</span><strong>Agoè-Dikamé, Togo</strong></div>
+        </div>
+      </div>
+      <footer className="site-footer">
+        <div className="wrap footer-inner">
+          <div className="footer-brand"><span>YS</span><div><strong>Yassine Sibabe</strong><small>Développeur full-stack</small></div></div>
+          <div className="footer-nav"><a href="https://github.com/Sibabeyassine" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/yassine-sibabe-584099280" target="_blank" rel="noreferrer">LinkedIn</a><a href="/CV-SIBABE-Yassine.pdf" target="_blank" rel="noreferrer">Curriculum vitæ</a></div>
+          <a className="back-top" href="#accueil">Retour en haut <span>↑</span></a>
+        </div>
+        <div className="wrap footer-bottom"><span>© 2026 SIBABE Yassine</span><span>Conçu et développé à Lomé</span></div>
+      </footer>
+    </section>
   </main>;
 }
